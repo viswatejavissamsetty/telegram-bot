@@ -37,24 +37,24 @@ export class AppUpdate {
     await ctx.reply('Hi');
   }
 
-  // @On('photo')
-  // async handlePhoto(ctx: Context) {
-  //   await ctx.reply('Succesfullly received photo');
-  // }
+  @On('photo')
+  async handlePhoto(ctx: Context) {
+    await ctx.reply('Succesfullly received photo');
+  }
 
-  // @Hears('Hi')
-  // @UseGuards(ChartGuardGuard)
-  // async hearsHi(@Ctx() ctx: Context) {
-  //   await ctx.reply('Hey there');
-  // }
+  @Hears('Hi')
+  @UseGuards(ChartGuardGuard)
+  async hearsHi(@Ctx() ctx: Context) {
+    await ctx.reply('Hey there');
+  }
 
-  // @On('text')
-  // async handleMessage(@Ctx() ctx: Context) {
-  //   await ctx.reply('Succesfullly received message');
-  // }
+  @On('text')
+  async handleMessage(@Ctx() ctx: Context) {
+    await ctx.reply('Succesfullly received message');
+  }
 
-  // @Help()
-  // async handleHelp(ctx: Context) {
-  //   await ctx.reply('Received help ' + JSON.stringify(ctx.message));
-  // }
+  @Help()
+  async handleHelp(ctx: Context) {
+    await ctx.reply('Received help ' + JSON.stringify(ctx.message));
+  }
 }
